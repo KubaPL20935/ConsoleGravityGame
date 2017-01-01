@@ -51,12 +51,12 @@ namespace ConsoleGravityGame
         static int jumpTimer = -1;
         static bool pressedR = false;
 
-        static string version = "0.1.0.0";       // game version
+        static string version = "0.1.0.0";     // game version
         static bool exeMode = true ;          // changes whether game should prompt user to change variables, useful when compiling exe
 #endregion                                   //
         #region some values you can change  //
                                            //
-        static bool randomBlocks = false; // specify if blocks placement is random or custom                                        // default true
+        static bool randomBlocks = true ; // specify if blocks placement is random or custom                                        // default true
         static int blocksSetId = 1;      // blocks set id, you can view and change them below                                      // default 1
         static bool flyMode = false;    // change to true to allow flying (jumping 2 blocks mid-air)                              // default false
         static int delayms = 150;      // 150 is ok, value changes ms delay between 'frames'                                     // default 150               
@@ -174,7 +174,7 @@ namespace ConsoleGravityGame
                                               3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 7, 5, 9, 7, 5, 9, 7, 5, 9, 7, 5, 9, 7, 5, 9, 7, 5, 9, 7, 4, 4, 4, 4, 4, 4, 4, 4,
                                               5, /*✔*/11, 12, 11, 10, 9, 8/*✔*/, 5, 4, 3, 3, 3, 11, 10, 8, 8, 8, 6, 6, 6, 7, 7, 7, 5, 5, 5, 6, 4, /*g*/ 3,
                                               3, 3, 3, 4, 5, 6, 7, 7, 7, 7, 6, 5, 5, /*g*//*g*/ 3, 3, 3, 3, 4, 5, 6, 7, 7, 7, 7, 6, 5, 5 /*g*/ };
-                        if (blocksx.Length != blocksy.Length) { Console.Write(blocksx.Length + " " + blocksy.Length); Console.ReadKey(true); Console.CursorLeft -= (blocksx.Length.ToString().Length * 2 + 1); Console.Write(repeatChar(' ', (blocksx.Length.ToString().Length * 2 + 1))); }
+                       //\/ if (blocksx.Length != blocksy.Length) { Console.Write(blocksx.Length + " " + blocksy.Length); Console.ReadKey(true); Console.CursorLeft -= (blocksx.Length.ToString().Length * 2 + 1); Console.Write(repeatChar(' ', (blocksx.Length.ToString().Length * 2 + 1))); }
                         break;
 
                     case 3: // hookjumps
